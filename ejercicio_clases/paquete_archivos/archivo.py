@@ -1,4 +1,5 @@
 import codecs
+import sys
 
 class MiArchivo:
     """
@@ -27,10 +28,10 @@ class MiArchivoEscribir:
         """
         """
         self.archivo = codecs.open("data/informacion_ordenada.csv", "a")
-
+        #Se imprime la infrmacion
     def agregar_informacion(self, p):
-        self.archivo.write("%s-%s-%s-%d\n" % (e.nombres, e.ciudad,\
-                e.campeonato, e.numJugadores))
+        self.archivo.write("%s-%s-%s-%d\n" % (p.obtenerNombres(), p.obtenerCiudad(),\
+                p.obtenerCampeonatos(), p.obtenernumJugadores()))
 
     def cerrar_archivo(self):
         self.archivo.close()

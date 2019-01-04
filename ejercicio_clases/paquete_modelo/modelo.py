@@ -5,11 +5,12 @@ class Equipo(object):
     def __init__(self, n, ciu, cam, num):
         """
         """
+        #declaro mis variables a utilizar
         self.nombres = n
         self.ciudad = ciu
         self.campeonatos = int(cam)
         self.numJugadores = int(num)
-
+        #Metodos obtener y agregar para cada una de las variables 
     def agregarNombres(self, n):
         """
         """
@@ -49,7 +50,7 @@ class Equipo(object):
         """
         """
         return self.numJugadores
-    
+    #Realizo la impresión 
     def __str__(self):
         """
         """
@@ -65,7 +66,7 @@ class Operaciones(object):
     
     def __init__(self, listado):
         self.listado_equipo = listado
-
+        #Realizo estas dons funciones dependiendo de lo que le usurio desea
     def ordenarNombres(self):
         """
             https://docs.python.org/3/howto/sorting.html
